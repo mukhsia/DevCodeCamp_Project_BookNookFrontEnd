@@ -55,7 +55,6 @@ const BookDetailsPage = () => {
             let response = await axios.get(
                 `https://www.googleapis.com/books/v1/volumes/${bookId}`
             );
-            console.log(response.data.volumeInfo);
             setBookDetails(response.data.volumeInfo);
         } catch (error) {
             console.log(error);
