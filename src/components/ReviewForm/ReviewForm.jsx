@@ -59,7 +59,7 @@ const ReviewForm = ({ bookId, fetchReviews }) => {
                             id="rating"
                             name="rating"
                             type="number"
-                            min="1.0"
+                            min="0.0"
                             max="5.0"
                             step="0.1"
                             value={formData.value}
