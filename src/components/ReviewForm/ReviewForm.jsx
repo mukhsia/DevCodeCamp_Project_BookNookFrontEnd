@@ -42,6 +42,7 @@ const ReviewForm = ({ bookId, fetchReviews }) => {
                 <label form d-flex>
                     Leave a Review:
                     <input
+                        id="reviewBox"
                         name="text"
                         type="text"
                         value={formData.text}
@@ -52,6 +53,7 @@ const ReviewForm = ({ bookId, fetchReviews }) => {
                     <label className="d-flex flex-row align-items-start mx-4">
                         Rating:
                         <input
+                            id="rating"
                             name="rating"
                             type="number"
                             min="1.0"

@@ -32,6 +32,7 @@ const SearchBar = ({ setBooks }) => {
             >
                 <label>
                     <input
+                        id="searchBar"
                         type="text"
                         name="searchParam"
                         value={formData.searchParam}
