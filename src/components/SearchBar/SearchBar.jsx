@@ -1,7 +1,7 @@
 import React from 'react';
 import useCustomForm from '../../hooks/useCustomForm';
-
 import axios from 'axios';
+import './SearchBar.css';
 
 const SearchBar = ({ setBooks }) => {
     const defaultValues = {
@@ -25,17 +25,22 @@ const SearchBar = ({ setBooks }) => {
     }
 
     return (
-        <div className='container'>
-            <form className='form' onSubmit={handleSubmit}>
+        <div className="container d-flex align-items-start mb-4">
+            <form
+                className="form d-flex align-items-start flex-row p-2"
+                onSubmit={handleSubmit}
+            >
                 <label>
                     <input
-                        type='text'
-                        name='searchParam'
+                        type="text"
+                        name="searchParam"
                         value={formData.searchParam}
                         onChange={handleInputChange}
                     />
                 </label>
-                <button type='submit'>Search</button>
+                <button type="submit" className="searchButton">
+                    Search
+                </button>
             </form>
         </div>
     );

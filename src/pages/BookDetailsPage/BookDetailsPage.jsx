@@ -86,7 +86,7 @@ const BookDetailsPage = () => {
     }, []);
 
     return (
-        <div>
+        <div className="bookContainer">
             {bookId}
             <Book
                 bookDetails={bookDetails}
