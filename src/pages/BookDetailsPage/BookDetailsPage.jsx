@@ -26,7 +26,9 @@ const BookDetailsPage = () => {
         const formData = {
             bookId,
             title: bookDetails.title,
-            thumbnailUrl: bookDetails.imageLinks.smallThumbnail,
+            thumbnailUrl: bookDetails.imageLinks
+                ? bookDetails.imageLinks.thumbnail
+                : '/images/noImage.jpg',
         };
 
         try {
@@ -50,6 +52,7 @@ const BookDetailsPage = () => {
             let response = await axios.get(
                 `https://www.googleapis.com/books/v1/volumes/${bookId}`
             );
+            console.log(response.data.volumeInfo);
             setBookDetails(response.data.volumeInfo);
         } catch (error) {
             console.log(error);
@@ -73,8 +76,13 @@ const BookDetailsPage = () => {
                     `https://localhost:5001/api/bookdetails/${bookId}`
                 );
             }
-            setIsFavorite(response.data.favorited);
-            setBookReviews(response.data);
+            if (response.status === 200) {
+                setIsFavorite(response.data.favorited);
+                setBookReviews(response.data);
+            }
+            if (response.status === 404) {
+                console.log('No reviews of the book was found.');
+            }
         } catch (error) {
             console.log(error);
         }

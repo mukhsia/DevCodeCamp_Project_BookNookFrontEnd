@@ -29,16 +29,16 @@ const FavoritesList = ({ favoriteBooks, fetchFavorites }) => {
                 {favoriteBooks &&
                     favoriteBooks.map((book, index) => {
                         return (
-                            <div className="bookContainer d-flex flex-row align-items-center">
-                                <Link
-                                    to={`/bookdetails/${book.bookId}`}
-                                    key={index}
-                                >
+                            <div
+                                className="bookContainer d-flex flex-row align-items-center"
+                                key={index}
+                            >
+                                <Link to={`/bookdetails/${book.bookId}`}>
                                     <li className="bookContainer d-flex flex-row align-items-center">
                                         <img
                                             src={book.thumbnailUrl}
                                             alt="Book Thumbnail"
-                                            className="mb-2"
+                                            className="bookImages mb-2"
                                         />
                                         <p className="m-5">{book.title}</p>
                                     </li>

@@ -10,10 +10,19 @@ const Book = ({ bookDetails, isFavorite, user, handleFavorite }) => {
             <div className="bookDetails d-flex flex-column p-4 m-4">
                 <div className="d-flex flex-row">
                     {' '}
-                    <img
-                        src={bookDetails.imageLinks.thumbnail}
-                        alt="Book cover"
-                    />
+                    {bookDetails.imageLinks ? (
+                        <img
+                            className="bookImages"
+                            src={bookDetails.imageLinks.thumbnail}
+                            alt="Book cover"
+                        />
+                    ) : (
+                        <img
+                            src="/images/noImage.jpg"
+                            alt="Unavailable."
+                            className="bookImages"
+                        />
+                    )}
                     <div className="m-2">
                         {user ? (
                             <button

@@ -39,7 +39,7 @@ const ReviewForm = ({ bookId, fetchReviews }) => {
     return (
         <div className="container">
             <form className="form d-flex" onSubmit={handleSubmit}>
-                <label form d-flex>
+                <label>
                     Leave a Review:
                     <input
                         id="reviewBox"
