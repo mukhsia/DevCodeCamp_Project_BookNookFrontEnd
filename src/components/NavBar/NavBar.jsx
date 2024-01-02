@@ -12,12 +12,22 @@ const Navbar = () => {
             <ul>
                 <li className='brand'>
                     <Link
-                        to='/'
+                        to='/search'
                         style={{ textDecoration: 'none', color: 'white' }}
                     >
                         <b>BookNook</b>
                     </Link>
                 </li>
+                <li>
+                    {user ? (
+                        <Link to='/favorites'>
+                            <b>Favorites</b>
+                        </Link>
+                    ) : (
+                        <div />
+                    )}
+                </li>
+                <li>{user ? <h4>Hello, {user.userName}</h4> : <div />}</li>
                 <li>
                     {user ? (
                         <button onClick={logoutUser}>Logout</button>
