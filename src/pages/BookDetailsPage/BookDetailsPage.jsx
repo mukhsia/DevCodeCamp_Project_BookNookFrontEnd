@@ -95,7 +95,11 @@ const BookDetailsPage = () => {
             />
             <div className="m-4">
                 <ReviewList bookReviews={bookReviews} />
-                <ReviewForm bookId={bookId} fetchReviews={fetchReviews} />
+                {user ? (
+                    <ReviewForm bookId={bookId} fetchReviews={fetchReviews} />
+                ) : (
+                    <div></div>
+                )}
             </div>
         </div>
     );
