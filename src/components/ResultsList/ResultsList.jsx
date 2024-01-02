@@ -7,10 +7,10 @@ const ResultsList = ({ books }) => {
             {console.log('ResultsList executing')}
             <ul>
                 {books &&
-                    books.map((book) => {
+                    books.map((book, index) => {
                         return (
                             <Link to={`/bookdetails/${book.id}`}>
-                                <li key={book.id}>{book.volumeInfo.title}</li>
+                                <li key={index}>{book.volumeInfo.title}</li>
                             </Link>
                         );
                     })}

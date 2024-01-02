@@ -13,8 +13,12 @@ import { BOOKDATA } from '../../localData';
 const BookDetailsPage = () => {
     const [user, token] = useAuth();
     const navigate = useNavigate;
+
     const { bookId } = useParams();
-    const [bookDetails, setBookDetails] = useState(BOOKDATA);
+
+    const [bookDetails, setBookDetails] = useState();
+    const [bookReviews, setBookReviews] = useState();
+    const [isFavorite, setIsFavorite] = useState(false);
 
     async function fetchDetails() {
         try {
@@ -27,15 +31,41 @@ const BookDetailsPage = () => {
         }
     }
 
+    async function fetchReviews() {
+        try {
+            let response;
+            if (user) {
+                response = await axios.get(
+                    `https://localhost:5001/api/bookdetails/${bookId}`,
+                    {
+                        headers: {
+                            Authorization: 'Bearer ' + token,
+                        },
+                    }
+                );
+            } else {
+                response = await axios.get(
+                    `https://localhost:5001/api/bookdetails/${bookId}`
+                );
+            }
+            console.log(response.data);
+            setIsFavorite(response.data.favorited);
+            setBookReviews(response.data);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
     useEffect(() => {
-        //fetchDetails();
+        fetchDetails();
+        fetchReviews();
     }, []);
 
     return (
         <div>
             {bookId}
-            <Book bookDetails={bookDetails} />
-            <ReviewList />
+            <Book bookDetails={bookDetails} isFavorite={isFavorite} />
+            <ReviewList bookReviews={bookReviews} />
             <ReviewForm />
         </div>
     );
