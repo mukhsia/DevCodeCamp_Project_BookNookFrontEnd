@@ -4,6 +4,7 @@ import './Book.css';
 
 const Book = ({ bookDetails, isFavorite, user, handleFavorite }) => {
     const btnClass = isFavorite ? 'btn btn-success' : 'btn btn-secondary';
+    const btnLabel = isFavorite ? 'Favorited' : 'Favorite';
 
     if (bookDetails) {
         return (
@@ -25,13 +26,16 @@ const Book = ({ bookDetails, isFavorite, user, handleFavorite }) => {
                     )}
                     <div className="m-2">
                         {user ? (
-                            <button
-                                type="button"
-                                className={`${btnClass}`}
-                                onClick={handleFavorite}
-                            >
-                                Favorite
-                            </button>
+                            <form onSubmit={handleFavorite}>
+                                {' '}
+                                <button
+                                    type="submit"
+                                    disabled={isFavorite}
+                                    className={`${btnClass}`}
+                                >
+                                    {btnLabel}
+                                </button>
+                            </form>
                         ) : (
                             <div></div>
                         )}

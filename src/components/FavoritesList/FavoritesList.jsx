@@ -47,7 +47,7 @@ const FavoritesList = ({ favoriteBooks, fetchFavorites }) => {
                                     className="btn btn-danger"
                                     onClick={() => deleteFavorite(book.id)}
                                 >
-                                    Delete
+                                    Unfavorite
                                 </button>
                             </div>
                         );
