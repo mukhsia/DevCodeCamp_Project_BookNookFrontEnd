@@ -39,9 +39,7 @@ const BookDetailsPage = () => {
                     },
                 }
             );
-            if (response.status === 201) {
-                fetchReviews();
-            }
+            fetchReviews();
         } catch (error) {
             console.warn('Error trying to favorite book: ', error);
         }
