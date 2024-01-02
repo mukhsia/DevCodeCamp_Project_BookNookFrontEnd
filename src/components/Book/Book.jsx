@@ -6,14 +6,11 @@ const Book = ({ bookDetails, isFavorite, user, handleFavorite }) => {
 
     if (bookDetails) {
         return (
-            <div className='bookDetails'>
-                <img
-                    src={bookDetails.imageLinks.smallThumbnail}
-                    alt='Book cover'
-                />
+            <div className="bookDetails">
+                <img src={bookDetails.imageLinks.thumbnail} alt="Book cover" />
                 {user ? (
                     <button
-                        type='button'
+                        type="button"
                         className={btnClass}
                         onClick={handleFavorite}
                     >
