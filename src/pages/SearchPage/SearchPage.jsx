@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import ResultsList from '../../components/ResultsList/ResultsList';
 
-import { DATA } from '../../localData';
+import { SEARCHDATA } from '../../localData';
 
 const SearchPage = () => {
     const [user, token] = useAuth();

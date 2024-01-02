@@ -1,4 +1,4 @@
-export const DATA = [
+export const SEARCHDATA = [
     {
         kind: 'books#volume',
         id: 'pD6arNyKyi8C',
@@ -857,3 +857,68 @@ export const DATA = [
         },
     },
 ];
+
+export const BOOKDATA = {
+    title: 'The Two Towers',
+    subtitle: 'Being the Second Part of The Lord of the Rings',
+    authors: ['J.R.R. Tolkien'],
+    publisher: 'HarperCollins',
+    publishedDate: '2012-02-15',
+    description:
+        '<p>Begin your journey into Middle-earth... The inspiration for the upcoming original series on Prime Video, The Lord of the Rings: The Rings of Power.</p><p>The Two Towers is the second part of J.R.R. Tolkien’s epic adventure The Lord of the Rings.</p><p>One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them.</p><p>Frodo and his Companions of the Ring have been beset by danger during their quest to prevent the Ruling Ring from falling into the hands of the Dark Lord by destroying it in the Cracks of Doom. They have lost the wizard, Gandalf, in a battle in the Mines of Moria. And Boromir, seduced by the power of the Ring, tried to seize it by force. While Frodo and Sam made their escape, the rest of the company was attacked by Orcs. Now they continue the journey alone down the great River Anduin—alone, that is, save for the mysterious creeping figure that follows wherever they go.</p><p>This continues the classic tale begun in The Fellowship of the Ring, which reaches its awesome climax in The Return of the King.</p>',
+    industryIdentifiers: [
+        {
+            type: 'ISBN_10',
+            identifier: '0547952023',
+        },
+        {
+            type: 'ISBN_13',
+            identifier: '9780547952024',
+        },
+    ],
+    readingModes: {
+        text: true,
+        image: false,
+    },
+    pageCount: 448,
+    printedPageCount: 495,
+    printType: 'BOOK',
+    categories: [
+        'Young Adult Fiction / Fantasy / Epic',
+        'Young Adult Fiction / Fantasy / Wizards & Witches',
+        'Young Adult Fiction / Legends, Myths, Fables / General',
+        'Fiction / Fantasy / Epic',
+        'Fiction / Classics',
+        'Fiction / Fantasy / Action & Adventure',
+        'Fiction / Fairy Tales, Folk Tales, Legends & Mythology',
+        'Fiction / Fantasy / Dragons & Mythical Creatures',
+        'Fiction / Media Tie-In',
+    ],
+    averageRating: 5,
+    ratingsCount: 10,
+    maturityRating: 'NOT_MATURE',
+    allowAnonLogging: true,
+    contentVersion: '5.22.21.0.preview.2',
+    panelizationSummary: {
+        containsEpubBubbles: false,
+        containsImageBubbles: false,
+    },
+    imageLinks: {
+        smallThumbnail:
+            'http://books.google.com/books/content?id=12e8PJ2T7sQC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE73xwCyIKo_7xew92pYV5isP9y2uvZSCyCWboygCkkFgQWqcfVB2IH3SU-Uz-vd82VcuY8iOcocfNKi-loxbmtwKtXlPjywfSvFixTA1KpOphUJVlBsbKK_evNDwmG2tGf8hDBpJ&source=gbs_api',
+        thumbnail:
+            'http://books.google.com/books/content?id=12e8PJ2T7sQC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE738zHFhpsv4aP0mdpUfO1LxTIJISt2kVJeo43RBS0P7jjq06HrLWTVttZkMoEADhVgrmgnrneVfvLDO-km-pLbqpFYE-jYVkK4ggTtFXfdDIifzFyz0PUOayMUMD4Dk5ixjrpqc&source=gbs_api',
+        small: 'http://books.google.com/books/content?id=12e8PJ2T7sQC&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE70K3eIDfwfMaEA9_Nk8LG9IRn6JHzJscUlksKPJs6loHFPdTGVNkv_Pq6YNVfhSCrwuHCMNGdYjlb1A3_oz5z9MdXCP9-1QH4obV80Ku8RsVfNu28Yjq5rsUPYUBlgh71PO4jPJ&source=gbs_api',
+        medium: 'http://books.google.com/books/content?id=12e8PJ2T7sQC&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE73nk_jxbTWGHouuzZVXfOD1QqZ3j3CnV4-8Y_JbnETgNkfRktxouRoJ0-B2q3sIfOSQL4p6zov2ZSx0Ak4GHz1CklXNBQu_4J4hiGcBJZXXgtVajTcYvtAQYauQz95IezkGya4R&source=gbs_api',
+        large: 'http://books.google.com/books/content?id=12e8PJ2T7sQC&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE70vl7BStMlwEkHCuAmrLrulOO0c3EX5gMcGTQQjjVwnMUQVqJzjiipwRT2b0Rn2ROppcWWTmaOkbf1FI6RSFfj4oVakf5yeXPT9iz9KuTSoCL7UcYVmWCfexQF-hGF8WW2sm-aE&source=gbs_api',
+        extraLarge:
+            'http://books.google.com/books/content?id=12e8PJ2T7sQC&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE73ATYberbq0E3sOf07KWOWk0VJ3g3jnhCYQ4timdSf25ZNuQpY1E3DuPs52cVt--VbPbsKY6e2QAUdGvNAJNbSRceqK3FstAQT2GtMk1YSCu7s4DibtlvViZVboTW2pA7KQk5E-&source=gbs_api',
+    },
+    language: 'en',
+    previewLink:
+        'http://books.google.com/books?id=12e8PJ2T7sQC&hl=&source=gbs_api',
+    infoLink:
+        'https://play.google.com/store/books/details?id=12e8PJ2T7sQC&source=gbs_api',
+    canonicalVolumeLink:
+        'https://play.google.com/store/books/details?id=12e8PJ2T7sQC',
+};
