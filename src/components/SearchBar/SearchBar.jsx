@@ -1,7 +1,10 @@
+//General Imports
 import React from 'react';
-import useCustomForm from '../../hooks/useCustomForm';
 import axios from 'axios';
 import './SearchBar.css';
+
+// Hook Imports
+import useCustomForm from '../../hooks/useCustomForm';
 
 const SearchBar = ({ setBooks }) => {
     const defaultValues = {

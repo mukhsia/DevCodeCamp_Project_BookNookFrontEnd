@@ -1,6 +1,9 @@
+// General Imports
 import React from 'react';
-import parse from 'html-react-parser';
 import './Book.css';
+
+// Utility Library Import
+import parse from 'html-react-parser';
 
 const Book = ({ bookDetails, isFavorite, user, handleFavorite }) => {
     const btnClass = isFavorite ? 'btn btn-success' : 'btn btn-secondary';

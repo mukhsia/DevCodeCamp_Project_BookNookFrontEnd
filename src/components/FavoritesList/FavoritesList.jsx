@@ -1,8 +1,10 @@
+// General Imports
 import React from 'react';
 import { Link } from 'react-router-dom';
-import useCustomForm from '../../hooks/useCustomForm';
-import useAuth from '../../hooks/useAuth';
 import axios from 'axios';
+
+// Hook Imports
+import useAuth from '../../hooks/useAuth';
 
 const FavoritesList = ({ favoriteBooks, fetchFavorites }) => {
     const [user, token] = useAuth();

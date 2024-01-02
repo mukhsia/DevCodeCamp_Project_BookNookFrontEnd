@@ -1,13 +1,16 @@
+// General Imports
 import React from 'react';
 import { useEffect, useState } from 'react';
 import useAuth from '../../hooks/useAuth';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
 
+// Component Imports
 import Book from '../../components/Book/Book';
 import ReviewForm from '../../components/ReviewForm/ReviewForm';
 import ReviewList from '../../components/ReviewList/ReviewList';
 
+// LocalData Imports
 import { BOOKDATA } from '../../localData';
 
 const BookDetailsPage = () => {

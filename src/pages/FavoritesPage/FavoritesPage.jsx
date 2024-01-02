@@ -1,8 +1,13 @@
+// General Imports
 import React from 'react';
 import { useEffect, useState } from 'react';
-import useAuth from '../../hooks/useAuth';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+
+// Hook Imports
+import useAuth from '../../hooks/useAuth';
+
+// Component Imports
 import FavoritesList from '../../components/FavoritesList/FavoritesList';
 
 const FavoritesPage = () => {
