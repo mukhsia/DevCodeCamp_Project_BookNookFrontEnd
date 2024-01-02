@@ -22,29 +22,22 @@ function App() {
         <div>
             <Navbar />
             <Routes>
+                <Route path="/" element={<HomePage />} />
                 <Route
-                    path='/'
-                    element={
-                        <PrivateRoute>
-                            <HomePage />
-                        </PrivateRoute>
-                    }
-                />
-                <Route
-                    path='/favorites'
+                    path="/favorites"
                     element={
                         <PrivateRoute>
                             <FavoritesPage />
                         </PrivateRoute>
                     }
                 />
-                <Route path='/search' element={<SearchPage />} />
+                <Route path="/search" element={<SearchPage />} />
                 <Route
-                    path='/bookdetails/:bookId/'
+                    path="/bookdetails/:bookId/"
                     element={<BookDetailsPage />}
                 />
-                <Route path='/register' element={<RegisterPage />} />
-                <Route path='/login' element={<LoginPage />} />
+                <Route path="/register" element={<RegisterPage />} />
+                <Route path="/login" element={<LoginPage />} />
             </Routes>
             <Footer />
         </div>
