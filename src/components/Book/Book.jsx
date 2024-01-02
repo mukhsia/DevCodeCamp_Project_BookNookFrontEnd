@@ -1,7 +1,7 @@
 import React from 'react';
 import parse from 'html-react-parser';
 
-const Book = ({ bookDetails, isFavorite }) => {
+const Book = ({ bookDetails, isFavorite, user }) => {
     const btnClass = isFavorite ? 'btn btn-success' : 'btn btn-secondary';
 
     if (bookDetails) {
@@ -12,9 +12,13 @@ const Book = ({ bookDetails, isFavorite }) => {
                     src={bookDetails.imageLinks.smallThumbnail}
                     alt='Book cover'
                 />
-                <button type='button' className={btnClass}>
-                    Favorite
-                </button>
+                {user ? (
+                    <button type='button' className={btnClass}>
+                        Favorite
+                    </button>
+                ) : (
+                    <div></div>
+                )}
                 <h2>{bookDetails.title}</h2>
                 <h3>{bookDetails.authors}</h3>
                 <div>{parse(bookDetails.description)}</div>

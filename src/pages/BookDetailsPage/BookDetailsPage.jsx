@@ -64,7 +64,11 @@ const BookDetailsPage = () => {
     return (
         <div>
             {bookId}
-            <Book bookDetails={bookDetails} isFavorite={isFavorite} />
+            <Book
+                bookDetails={bookDetails}
+                isFavorite={isFavorite}
+                user={user}
+            />
             <ReviewList bookReviews={bookReviews} />
             <ReviewForm />
         </div>
