@@ -97,7 +97,7 @@ const BookDetailsPage = () => {
                 handleFavorite={handleFavorite}
             />
             <ReviewList bookReviews={bookReviews} />
-            <ReviewForm />
+            <ReviewForm bookId={bookId} fetchReviews={fetchReviews} />
         </div>
     );
 };
