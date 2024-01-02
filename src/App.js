@@ -39,7 +39,10 @@ function App() {
                     }
                 />
                 <Route path='/search' element={<SearchPage />} />
-                <Route path='/bookdetails' element={<BookDetailsPage />} />
+                <Route
+                    path='/bookdetails/:bookId/'
+                    element={<BookDetailsPage />}
+                />
                 <Route path='/register' element={<RegisterPage />} />
                 <Route path='/login' element={<LoginPage />} />
             </Routes>
