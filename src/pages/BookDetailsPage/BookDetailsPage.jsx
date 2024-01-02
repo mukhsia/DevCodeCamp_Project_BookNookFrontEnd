@@ -26,7 +26,7 @@ const BookDetailsPage = () => {
         const formData = {
             bookId,
             title: bookDetails.title,
-            thumbnail: bookDetails.imageLinks.smallThumbnail,
+            thumbnailUrl: bookDetails.imageLinks.smallThumbnail,
         };
 
         try {

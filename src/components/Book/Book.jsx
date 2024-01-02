@@ -7,7 +7,6 @@ const Book = ({ bookDetails, isFavorite, user, handleFavorite }) => {
     if (bookDetails) {
         return (
             <div className='bookDetails'>
-                {console.log(bookDetails)}
                 <img
                     src={bookDetails.imageLinks.smallThumbnail}
                     alt='Book cover'
