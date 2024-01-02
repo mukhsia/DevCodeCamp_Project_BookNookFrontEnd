@@ -1,0 +1,21 @@
+.container {
+    text-align: left;
+}
+
+.form input[type='text'] {
+    width: 100%;
+    padding: 1rem 10rem 15rem 14px;
+    margin: 1px 0 0 0;
+    box-sizing: border-box;
+}
+
+.form input[type='number'] {
+    width: 3rem;
+    height: 2rem;
+    padding: 0;
+    text-align: center;
+}
+
+.input {
+    max-width: 100%;
+}

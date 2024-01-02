@@ -3,6 +3,7 @@ import axios from 'axios';
 import useCustomForm from '../../hooks/useCustomForm';
 import useAuth from '../../hooks/useAuth';
 import { useNavigate } from 'react-router-dom';
+import './ReviewForm.css';
 
 const ReviewForm = ({ bookId, fetchReviews }) => {
     const [user, token] = useAuth();
@@ -37,8 +38,8 @@ const ReviewForm = ({ bookId, fetchReviews }) => {
 
     return (
         <div className="container">
-            <form className="form" onSubmit={handleSubmit}>
-                <label>
+            <form className="form d-flex" onSubmit={handleSubmit}>
+                <label form d-flex>
                     Leave a Review:
                     <input
                         name="text"
@@ -47,20 +48,23 @@ const ReviewForm = ({ bookId, fetchReviews }) => {
                         onChange={handleInputChange}
                     />
                 </label>
-                <label>
-                    Rating:
-                    <input
-                        name="rating"
-                        type="number"
-                        min="1.0"
-                        max="5.0"
-                        step="0.1"
-                        value={formData.value}
-                        onChange={handleInputChange}
-                    />
-                    /5.0
-                </label>
-                <button className="btn btn-primary mt-3">Submit!</button>
+                <div className="d-flex flex-row justify-content-between align-items-start">
+                    <label className="d-flex flex-row align-items-start mx-4">
+                        Rating:
+                        <input
+                            name="rating"
+                            type="number"
+                            min="1.0"
+                            max="5.0"
+                            step="0.1"
+                            value={formData.value}
+                            onChange={handleInputChange}
+                            className="mx-2 "
+                        />
+                        <p className="mx-2">out of 5.0</p>
+                    </label>
+                    <button className="btn btn-primary">Submit!</button>
+                </div>
             </form>
         </div>
     );

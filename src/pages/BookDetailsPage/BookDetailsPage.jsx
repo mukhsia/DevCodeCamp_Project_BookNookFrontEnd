@@ -86,16 +86,17 @@ const BookDetailsPage = () => {
     }, []);
 
     return (
-        <div className="bookContainer">
-            {bookId}
+        <div className="d-flex flex-row justify-content-between">
             <Book
                 bookDetails={bookDetails}
                 isFavorite={isFavorite}
                 user={user}
                 handleFavorite={handleFavorite}
             />
-            <ReviewList bookReviews={bookReviews} />
-            <ReviewForm bookId={bookId} fetchReviews={fetchReviews} />
+            <div className="m-4">
+                <ReviewList bookReviews={bookReviews} />
+                <ReviewForm bookId={bookId} fetchReviews={fetchReviews} />
+            </div>
         </div>
     );
 };

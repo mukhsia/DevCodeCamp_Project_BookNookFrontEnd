@@ -1,14 +1,15 @@
 import React from 'react';
+import './ReviewList.css';
 
 const ReviewList = ({ bookReviews }) => {
     return (
-        <div className='container'>
-            <h2>
+        <div className="container d-flex flex-column align-items-start">
+            <h3>
                 Average User Rating: {bookReviews ? bookReviews.average : '-'}
                 /5.0
-            </h2>
-            <h3>User Reviews:</h3>
-            <ul>
+            </h3>
+            <h4>User Reviews:</h4>
+            <ul className="reviewList d-flex flex-column align-items-start">
                 {bookReviews &&
                     bookReviews.reviews.map((review, index) => {
                         return (
