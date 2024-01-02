@@ -1,9 +1,12 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import useAuth from '../../hooks/useAuth';
-
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
+
+import Book from '../../components/Book/Book';
+import ReviewForm from '../../components/ReviewForm/ReviewForm';
+import ReviewList from '../../components/ReviewList/ReviewList';
 
 import { BOOKDATA } from '../../localData';
 
@@ -28,7 +31,14 @@ const BookDetailsPage = () => {
         //fetchDetails();
     }, []);
 
-    return <div className=''>{bookId}</div>;
+    return (
+        <div>
+            {bookId}
+            <Book bookDetails={bookDetails} />
+            <ReviewList />
+            <ReviewForm />
+        </div>
+    );
 };
 
 export default BookDetailsPage;
