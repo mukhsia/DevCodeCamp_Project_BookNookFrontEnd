@@ -34,7 +34,10 @@ const FavoritesPage = () => {
     return (
         <div className="container d-flex flex-column p-2">
             <h1 className="d-flex align-items-start mb-5">Your Favorites</h1>
-            <FavoritesList favoriteBooks={favoriteBooks} />
+            <FavoritesList
+                favoriteBooks={favoriteBooks}
+                fetchFavorites={fetchFavorites}
+            />
         </div>
     );
 };
