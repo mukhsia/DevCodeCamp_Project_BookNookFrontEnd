@@ -20,6 +20,33 @@ const BookDetailsPage = () => {
     const [bookReviews, setBookReviews] = useState();
     const [isFavorite, setIsFavorite] = useState(false);
 
+    async function handleFavorite(e) {
+        e.preventDefault();
+
+        const formData = {
+            bookId,
+            title: bookDetails.title,
+            thumbnail: bookDetails.imageLinks.smallThumbnail,
+        };
+
+        try {
+            const response = await axios.post(
+                'https://localhost:5001/api/favorites',
+                formData,
+                {
+                    headers: {
+                        Authorization: 'Bearer ' + token,
+                    },
+                }
+            );
+            if (response.status === 201) {
+                fetchReviews();
+            }
+        } catch (error) {
+            console.warn('Error trying to favorite book: ', error);
+        }
+    }
+
     async function fetchDetails() {
         try {
             let response = await axios.get(
@@ -48,7 +75,6 @@ const BookDetailsPage = () => {
                     `https://localhost:5001/api/bookdetails/${bookId}`
                 );
             }
-            console.log(response.data);
             setIsFavorite(response.data.favorited);
             setBookReviews(response.data);
         } catch (error) {
@@ -68,6 +94,7 @@ const BookDetailsPage = () => {
                 bookDetails={bookDetails}
                 isFavorite={isFavorite}
                 user={user}
+                handleFavorite={handleFavorite}
             />
             <ReviewList bookReviews={bookReviews} />
             <ReviewForm />
