@@ -105,10 +105,8 @@ const BookDetailsPage = () => {
             />
             <div className="m-4">
                 <ReviewList bookReviews={bookReviews} />
-                {user ? (
+                {user && (
                     <ReviewForm bookId={bookId} fetchReviews={fetchReviews} />
-                ) : (
-                    <div></div>
                 )}
             </div>
         </div>

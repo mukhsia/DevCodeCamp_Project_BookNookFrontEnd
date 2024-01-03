@@ -19,24 +19,20 @@ const Navbar = () => {
                     </Link>
                 </li>
                 <li className="p-2">
-                    {user ? (
+                    {user && (
                         <Link
                             to="/favorites"
                             style={{ textDecoration: 'none', color: '#2c88d9' }}
                         >
                             <b>Favorites</b>
                         </Link>
-                    ) : (
-                        <div />
                     )}
                 </li>
                 <li className="ml-auto p-2">
-                    {user ? (
+                    {user && (
                         <h4 style={{ textDecoration: 'none', color: 'black' }}>
                             Hello, {user.userName}
                         </h4>
-                    ) : (
-                        <div />
                     )}
                 </li>
                 <li className="authButton p-2">

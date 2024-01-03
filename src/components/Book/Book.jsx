@@ -28,7 +28,7 @@ const Book = ({ bookDetails, isFavorite, user, handleFavorite }) => {
                         />
                     )}
                     <div className="m-2">
-                        {user ? (
+                        {user && (
                             <form onSubmit={handleFavorite}>
                                 {' '}
                                 <button
@@ -39,15 +39,15 @@ const Book = ({ bookDetails, isFavorite, user, handleFavorite }) => {
                                     {btnLabel}
                                 </button>
                             </form>
-                        ) : (
-                            <div></div>
                         )}
                     </div>
                 </div>
 
                 <h2 className="mt-4 mb-2">{bookDetails.title}</h2>
                 <h5 className="mb-4">{bookDetails.authors}</h5>
-                <div>{parse(bookDetails.description)}</div>
+                <div>
+                    {bookDetails.description && parse(bookDetails.description)}
+                </div>
             </div>
         );
     } else {
